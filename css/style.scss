@@ -3,4 +3,84 @@
 
 //ПЕРЕМЕННЫЕ
 
+
 //МИКСИНЫ
+@mixin container () {
+	max-width: 1010px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+._container {
+	@include container();
+}
+//ОСТАЛЬНЫЕ СТИЛИ
+/*-----HEAD-----*/
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	background: linear-gradient(180deg, rgba(26, 26, 26, 0.0001) 0%, #1A1A1A 100%), linear-gradient(0deg, rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url(.jpg);
+	// .header__body
+	&__body {
+	display: flex;
+	align-items: center;
+	min-height: 90px;
+	justify-content: space-between;
+	}
+
+	// .header__logo
+	&__logo {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	// .header__menu
+	&__menu {
+	}
+}
+.header {
+
+	// ._container
+	&_container {
+	}
+}
+.logo-block {
+
+	// .logo-block__icon
+	&__icon {
+		margin: 0 9px 0 0;
+	}
+
+	// .logo-block__text
+	&__text {
+		flex: 0 0 auto;
+	}
+}
+.menu-block {
+
+	// .menu-block__list
+	&__list {
+		display: flex;
+		font-family: HelveticaNeue;
+		font-weight: 700;
+		line-height: 6.42;
+	}
+
+	// .menu-block__item
+	&__item {
+		&:not(:last-child){
+			margin: 0 45px 0 0;
+		}
+		// &:hover{
+		// 	text-decoration: underline;
+		// 	color:#34C759;
+		// }
+	}
+
+	// .menu-block__link
+	&__link {
+	}
+}
