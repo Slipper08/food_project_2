@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Обнуляющий стиль */
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap);
+@import "../css/swiper-bundle.min.css";
 *,
 *::before,
 *::after {
@@ -46,7 +47,7 @@ body,
 html {
   height: 100%;
   line-height: 1;
-  font-family: Roboto;
+  font-family: HelveticaNeueRoman;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 400;
@@ -112,7 +113,19 @@ body {
           box-sizing: border-box;
 }
 
-/*-----HEAD-----*/
+/*----------------------------HEAD-----*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -160,6 +173,159 @@ body {
   font-weight: 700;
   line-height: 6.42;
 }
+.menu-block__item {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 .menu-block__item:not(:last-child) {
   margin: 0 45px 0 0;
 }
+.menu-block__item:hover {
+  color: #34C759;
+}
+/*---------------------------MAIN BLOCK-----*/
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.main-block {
+  position: relative;
+}
+.main-block__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 2;
+  padding-top: 171px;
+}
+.main-block__button-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-block__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+  padding: 0 57px;
+  margin-bottom: 70px;
+  background-color: #34C759;
+  min-height: 72px;
+  border-radius: 43px;
+  -webkit-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.main-block__button:hover {
+  padding: 0 67px;
+  font-size: 22px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.main-block__contact {
+  margin-bottom: 401px;
+}
+.main-block__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-block_ibg {
+  position: relative;
+}
+
+.text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.text-block__title {
+  font-size: 72px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+.text-block__title-bold {
+  font-family: HelveticaNeue;
+  font-weight: 700;
+}
+.text-block__description {
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.text-block__description__upper {
+  text-transform: uppercase;
+}
+
+.contact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact-block__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-block__image {
+  margin-bottom: 16px;
+}
+.contact-block__text {
+  font-size: 16px;
+  line-height: 1.875;
+}
+.contact-block__description {
+  opacity: 0.5;
+  line-height: 2.28;
+}
+
+/*---------------------------SLIDER BLOCK-----*/
+.slider-block__swiper-body {
+  width: 600px;
+  height: 300px;
+}
+
+/*---------------------------FOOTER BLOCK-----*/
