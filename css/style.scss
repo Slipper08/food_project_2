@@ -9,7 +9,7 @@
 
 //МИКСИНЫ
 @mixin container () {
-	max-width: 1110px;
+	max-width: 1130px;
 	margin: 0 auto;
 	padding: 0 10px;
 	box-sizing: border-box;
@@ -546,13 +546,14 @@
 	&__meals {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 20px;
+		gap: 30px;
+		margin-bottom: 60px;
 	}
 
 	// .dishes-block__item
 
 	&__item {
-		flex: 1 1 calc((100% / 3) - 40px);
+		flex: 1 1 calc((100% / 3) - 60px);
 		background: #252525;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 		border-radius: 6px;
@@ -561,21 +562,21 @@
 	// .dishes-block__picture
 
 	&__picture {
-		margin-bottom: 29px;
-		// position: relative;
-		// padding: 0px 0px 50% 0px;
+		margin-bottom: 108px;
+		position: relative;
+		padding: 0px 0px 52% 0px;
 	
 	}
 
 	// .dishes-block__image
 
 	&__image {
-		// width: 100%;
-		// max-height: 260px;
-		// object-fit: cover;
-		// position: absolute;
-		// top: 0;
-		// left: 0;
+		width: 100%;
+		max-height: 260px;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	// .dishes-block__description
@@ -606,6 +607,11 @@
 
 	&__order {
 		padding: 0 30px;
+	}
+
+	&__empty{
+		visibility: hidden;
+		max-height: 0px;
 	}
 }
 
@@ -652,26 +658,151 @@
 	// .order-block__button
 
 	&__button {
+		display: flex;
+		align-items: center;
 		font-weight: 900;
 		font-size: 10px;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 0.5);
 		background: #262626;
-		line-height: 40px;
-		padding: 0 31px;
+		// line-height: 40px;
+		height: 40px;
+		padding: 0 30px;
 		border-radius: 30px;
 		border: 2px solid #303030;
+		transition: all 0.5s ease-out;
 		// .order-block__button_active
 
-		&_active {
+		// &_active {
+		// 	background: #34C759;
+		// 	color: #252525;
+		// 	padding: 0 32px;
+		// 	border: 0px;
+		// }
+		&:hover{
 			background: #34C759;
 			color: #252525;
 			padding: 0 32px;
 			border: 0px;
+			cursor: pointer;
 		}
 	}
 }
+/*---------------------------CHEFS-OF-THE-MONTH-----*/
+.page {
+
+	// .page__block-chefs
+
+	&__block-chefs {
+
+		background: #191919;
+	}
+}
+.chefs-block {
+
+	// .chefs-block__container
+
+	&__container {
+	}
+
+	// .chefs-block__text
+
+	&__text {
+	}
+
+	// .chefs-block__divide
+
+	&__divide {
+		max-width: 60px;
+		border: #34C759 solid 1px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+
+	// .chefs-block__list
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .chefs-block__item
+
+	&__item {
+		width: 350px;
+		margin-bottom: 30px;
+	}
+
+	// .chefs-block__description
+
+	&__description {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+
+	// .chefs-block__photo
+
+	&__photo {
+		margin-right: 24px;
+	}
+
+	// .chefs-block__image
+
+	&__image {
+	}
+
+	// .chefs-block__info
+
+	&__info {
+	}
+
+	// .chefs-block__name
+
+	&__name {
+		font-size: 18px;
+		line-height: 21px;
+		letter-spacing: -0.225px;
+		color: #FFFFFF;
+		margin-bottom: 6px;
+	}
+
+	// .chefs-block__about
+
+	&__about {
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: -0.15px;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	// .chefs-block__pictures
+
+	&__pictures {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .chefs-block__picture-item
+
+	&__picture-item {
+	}
+	
+}
+.text-block {
+
+	// .text-block__shadow
+
+	&__shadow {
+	}
+
+	// .text-block__title
+
+	&__title {
+	}
+}
+
 
 
 /*---------------------------FOOTER BLOCK-----*/
