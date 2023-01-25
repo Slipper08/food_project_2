@@ -547,7 +547,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
-		margin-bottom: 60px;
+		margin-bottom: 98px;
 	}
 
 	// .dishes-block__item
@@ -709,6 +709,7 @@
 	// .chefs-block__text
 
 	&__text {
+		margin-bottom: 15px;
 	}
 
 	// .chefs-block__divide
@@ -717,13 +718,14 @@
 		max-width: 60px;
 		border: #34C759 solid 1px;
 		margin: 0 auto;
-		margin-bottom: 60px;
+		margin-bottom: 38px;
 	}
 
 	// .chefs-block__list
 
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -731,7 +733,7 @@
 
 	&__item {
 		width: 350px;
-		margin-bottom: 30px;
+		margin-bottom: 120px;
 	}
 
 	// .chefs-block__description
@@ -788,7 +790,11 @@
 
 	&__picture-item {
 	}
-	
+
+	&__empty{
+		visibility: hidden;
+		max-height: 0px;
+	}
 }
 .text-block {
 

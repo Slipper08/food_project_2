@@ -546,7 +546,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 98px;
 }
 .dishes-block__item {
   -webkit-box-flex: 1;
@@ -651,23 +651,28 @@ body {
   background: #191919;
 }
 
+.chefs-block__text {
+  margin-bottom: 15px;
+}
 .chefs-block__divide {
   max-width: 60px;
   border: #34C759 solid 1px;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 38px;
 }
 .chefs-block__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .chefs-block__item {
   width: 350px;
-  margin-bottom: 30px;
+  margin-bottom: 120px;
 }
 .chefs-block__description {
   display: -webkit-box;
@@ -702,4 +707,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.chefs-block__empty {
+  visibility: hidden;
+  max-height: 0px;
+}
+
 /*---------------------------FOOTER BLOCK-----*/
