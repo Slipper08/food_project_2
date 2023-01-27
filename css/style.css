@@ -556,6 +556,7 @@ body {
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  overflow: hidden;
 }
 .dishes-block__picture {
   margin-bottom: 108px;
@@ -710,6 +711,235 @@ body {
 .chefs-block__empty {
   visibility: hidden;
   max-height: 0px;
+}
+
+/*---------------------------RECIPES-FROM-CHEFS-----*/
+.page__block-recipes {
+  background: #191919;
+}
+
+.recipes-block__divide {
+  max-width: 60px;
+  border: #34C759 solid 1px;
+  margin: 0 auto;
+  margin-bottom: 59px;
+}
+.recipes-block__views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.big-view-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 38, 38, 0.0001)), to(rgba(38, 38, 38, 0.5))), url("../img/recepies/big-image.jpg") 0 0 no-repeat;
+  background: -o-linear-gradient(top, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%), url("../img/recepies/big-image.jpg") 0 0 no-repeat;
+  background: linear-gradient(180deg, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%), url("../img/recepies/big-image.jpg") 0 0 no-repeat;
+  border-radius: 6px;
+  position: relative;
+}
+.big-view-block__eat-time {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: normal;
+  padding: 0 16.5px;
+  margin: 60px 0 65px;
+}
+.big-view-block__date {
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.big-view-block__description {
+  font-size: 24px;
+  line-height: 40px;
+  margin-bottom: 45px;
+}
+.big-view-block__chef-name {
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 60px;
+}
+.big-view-block__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+.big-view-block__views {
+  margin-right: 84px;
+  position: relative;
+}
+.big-view-block__views::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  background: url("../img/recepies/eye-icon.svg") 0 0 no-repeat;
+  position: absolute;
+  top: -3px;
+  left: -37px;
+}
+.big-view-block__comments {
+  position: relative;
+}
+.big-view-block__comments::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  background: url("../img/recepies/question-icon.svg") 0 0 no-repeat;
+  position: absolute;
+  top: -3px;
+  left: -37px;
+}
+.big-view-block__button {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.big-view-block__button-image {
+  position: relative;
+  top: 30%;
+}
+
+.small-views-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.small-views-block__item {
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.small-views-block__item:first-child {
+  background: #252525;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.small-views-block__item:nth-child(2) {
+  background: url("../img/recepies/small-image.jpg") 0 0/cover no-repeat;
+  border-radius: 6px;
+}
+.small-views-block__item:last-child {
+  background: #252525;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.small-views-block__item:hover {
+  background: #34C759;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  color: #252525;
+}
+.small-views-block__content {
+  padding: 30px 28px 25px 35px;
+}
+.small-views-block__description {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.small-views-block__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.small-views-block__time-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.small-views-block__eat-time {
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 9px 17px;
+  background: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: normal;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.small-views-block__date {
+  font-size: 12px;
+  color: #B3B3B3;
+}
+.small-views-block__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.small-views-block__views {
+  font-weight: 700;
+  font-size: 12px;
+  color: #D8D8D8;
+  position: relative;
+  margin-right: 64px;
+}
+.small-views-block__views::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+  background: url("../img/recepies/eye-icon.svg") 0 0 no-repeat;
+}
+.small-views-block__comments {
+  font-weight: 700;
+  font-size: 12px;
+  color: #D8D8D8;
+  position: relative;
+}
+.small-views-block__comments::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+  background: url("../img/recepies/question-icon.svg") 0 0 no-repeat;
 }
 
 /*---------------------------FOOTER BLOCK-----*/
