@@ -845,6 +845,7 @@
 	&__views {
 		display: flex;
 		gap: 30px;
+		margin-bottom: 120px;
 	}
 
 	// .recipes-block__big-view
@@ -855,6 +856,10 @@
 	// .recipes-block__small-views
 
 	&__small-views {
+	}
+	&__empty{
+		visibility: hidden;
+		max-height: 0px;
 	}
 }
 
@@ -890,6 +895,7 @@
 		mix-blend-mode: normal;
 		padding: 0 16.5px;
 		margin: 60px 0 65px;
+		border-radius: 3px;
 	}
 
 	// .big-view-block__date
@@ -972,6 +978,41 @@
 		position: relative;
 		top: 30%;
 	}
+
+	&:hover{
+		background: #34C759;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+		color: #191919;
+		& [class*="__eat-time"] {
+			background: #000000;
+			mix-blend-mode: normal;
+			color: #FFFFFF;
+		}
+		& [class*="__comments"]{
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 22px;
+				height: 15px;
+				background: url('../img/recepies/black-message.svg') 0 0 no-repeat;
+				position: absolute;
+				top: -3px;
+				left: -37px;
+			}
+		}
+		& [class*="__views"]{
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 22px;
+				height: 15px;
+				background: url('../img/recepies/black-eye.svg') 0 0 no-repeat;
+				position: absolute;
+				top: -3px;
+				left: -37px;
+			}
+		}
+	}
 }
 .small-views-block {
 	flex: 0 1 50%;
@@ -999,10 +1040,46 @@
 		}
 
 		&:hover{
-			background: #34C759;
+			background: rgba(52, 199, 89, 1);
 			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
-			border-radius: 6px;
-			color: #252525;
+			
+			& div .small-views-block__description{
+				color: #252525;
+			}
+			& [class*="__eat-time"] {
+				background: #000000;
+				mix-blend-mode: normal;
+			}
+			& [class*="__date"]{
+				color: #1A1A1A;
+			}
+			& [class*="__views"],& [class*="__comments"] {
+				color: #1A1A1A;
+			}
+			& [class*="__views"]{
+				&::before{
+					content: '';
+					display: inline-block;
+					width: 22px;
+					height: 15px;
+					background: url('../img/recepies/black-eye.svg') 0 0 no-repeat;
+					position: absolute;
+					top: -3px;
+					left: -37px;
+				}
+			}
+			& [class*="__comments"]{
+				&::before{
+					content: '';
+					display: inline-block;
+					width: 22px;
+					height: 15px;
+					background: url('../img/recepies/black-message.svg') 0 0 no-repeat;
+					position: absolute;
+					top: -3px;
+					left: -37px;
+				}
+			}
 		}
 	}
 	
@@ -1044,7 +1121,7 @@
 		padding: 9px 17px;
 		background: rgba(0, 0, 0, 0.3);
 		mix-blend-mode: normal;
-		border-radius: 6px;
+		border-radius: 3px;
 		margin-right: 10px;
 	}
 
