@@ -457,7 +457,7 @@
 		flex: 1 1 calc((100% / 4) - 90px);
 	}
 }
-.item-block {
+.item-block-card {
 	padding: 24px 24px 0px 24px;
 	background: #252525;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -881,7 +881,7 @@
 	background: linear-gradient(180deg, rgba(38, 38, 38, 0.0001) 0%, rgba(38, 38, 38, 0.5) 100%), url('../img/recepies/big-image.jpg') 0 0 no-repeat;
 	border-radius: 6px;
 	position: relative;
-
+	transition: all 0.5s ease;
 	// .big-view-block__eat-time
 
 	&__eat-time {
@@ -980,6 +980,7 @@
 	}
 
 	&:hover{
+		cursor: pointer;
 		background: #34C759;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 		color: #191919;
@@ -1040,6 +1041,7 @@
 		}
 
 		&:hover{
+			cursor: pointer;
 			background: rgba(52, 199, 89, 1);
 			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 			
@@ -1179,9 +1181,348 @@
 	}
 }
 
+/*---------------------------SOCIALS-----*/
+.page {
 
+	// .page__block-social
+
+	&__block-social {
+		background: #191919;
+	}
+}
+.social-block {
+
+	// .social-block__container
+
+	&__container {
+	}
+
+	// .social-block__text
+
+	&__text {
+	}
+
+	// .social-block__divide
+
+	&__divide {
+		max-width: 60px;
+		border: #34C759 solid 1px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+
+	// .social-block__networks
+
+	&__networks {
+		 display: flex;
+		 gap: 30px;
+		 margin-bottom: 120px;
+	}
+
+	//__empty
+	&__empty{
+		visibility: hidden;
+		max-height: 0px;
+	}
+
+	// .social-block__item
+
+	&__item {
+		flex: 1 1 calc((100% / 3) - 60px);
+		background: #252525;
+		border-radius: 6px;
+		max-height: 360px;
+		overflow: hidden;
+	}
+}
+
+.text-block {
+
+	// .text-block__shadow
+
+	&__shadow {
+	}
+
+	// .text-block__title
+
+	&__title {
+	}
+}
+.item-block {
+
+	// .item-block__header
+
+	&__header {
+		height: 100%;
+	}
+
+
+	// .item-block__header-info
+
+	&__header-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px;
+	}
+
+	//__net-info
+
+	&__net-info{
+		display: flex;
+		align-items: center;
+	}
+
+	&__header-devider{
+		height: 2px;
+		background: #303030;
+		margin-bottom: 20px;
+	}
+
+	// __image-block
+	&__image-block{
+		margin-right: 20px;
+	}
+	&:first-child &__image-block{
+			width: 44px;
+			height: 44px;
+			background: #262626;
+			border: 2px solid #303030;
+			border-radius: 50%;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				top: 15%;
+				left: 15%;
+				width: 28px;
+				height: 28px;
+				background: url('../img/socials/twitter-icon.svg') 0 0 no-repeat;
+			}
+		}
+		&:nth-child(2) &__image-block{
+			width: 44px;
+			height: 44px;
+			background: #262626;
+			border: 2px solid #303030;
+			border-radius: 50%;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				top: 15%;
+				left: 15%;
+				width: 28px;
+				height: 28px;
+				background: url('../img/socials/instagram-icon.svg') 0 0 no-repeat;
+			}
+		}
+		&:last-child &__image-block{
+			width: 44px;
+			height: 44px;
+			background: #262626;
+			border: 2px solid #303030;
+			border-radius: 50%;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				top: 15%;
+				left: 15%;
+				width: 28px;
+				height: 28px;
+				background: url('../img/socials/facebook-icon.svg') 0 0 no-repeat;
+			}
+		}
+	// .item-block__image
+	&:nth-child(2) [class*="__body"]{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		height: 280px;
+	}
+	&__image {
+		position: relative;
+		z-index: 10;
+	}
+
+	//__header-net-name
+
+	&__header-net-name{
+		font-size: 14px;
+		color: #BFBFBF;
+	}
+
+	// .item-block__button
+
+	&__button {
+		color: #737373;
+		font-weight: 900;
+		font-size: 8px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		padding: 14px 16px;
+		border: 2px solid #303030;
+		border-radius: 30px;
+		transition: all 0.5s ease;
+
+		&:hover{
+			cursor: pointer;
+			background: #34C759;
+			color: #252525;
+		}
+	}
+
+	// .item-block__body
+	
+	&__body {
+		padding: 0 20px 0 30px;
+		margin-right: 10px;
+		height: 245px;
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			width: 4px;
+		 }
+		 &::-webkit-scrollbar-track {
+			background-color: #252525;
+			border-radius: 100px;
+		 }
+		 &::-webkit-scrollbar-thumb {
+			background-color: #303030;;
+			border-radius: 100px;
+		 }
+	}
+
+	// .item-block__body-time
+
+	&__body-time {
+		line-height: 30px;
+		color: #737373;
+	}
+
+	// .item-block__body-text
+
+	&__body-text {
+		line-height: 30px;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	// .item-block__body-link
+
+	&__body-link {
+		line-height: 30px;
+		color: #34C759;
+	}
+
+	// .item-block__net-image
+
+	&__net-image {
+	}
+
+	// .item-block__image-block
+
+	&__picture-block {
+		flex: 0 1 calc((100% / 3));
+	}
+
+	// .item-block__picture
+
+	&__picture {
+		width: 100%;
+		object-fit: fill;
+		height: 110px;
+	}
+}
 
 
 /*---------------------------FOOTER BLOCK-----*/
-.footer{
+.footer {
+	background: #252525;
+	position: relative;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .footer__top-block
+
+	&__top-block {
+		display: flex;
+		width: 100%;
+		justify-content:space-around;
+		margin-bottom: 35px;
+	}
+
+	//footer__divider
+	&__divider{
+		height: 2px;
+		background: #303030;
+		width: 100%;
+		position: absolute;
+		top: 52%;
+		left: 0;
+	}
+
+	// .footer__down-block
+
+	&__down-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .footer__logo
+
+	&__logo {
+		margin-bottom: 10px;
+	}
+
+	// .footer__text
+
+	&__text {
+		color: #737373;
+		font-size: 12px;
+		line-height: 60px;
+		margin-bottom: 30px;
+	}
+}
+.block-top-footer {
+
+	// .block-top-footer__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .block-top-footer__image
+
+	&__image {
+		padding-top: 35px;
+		margin-bottom: 16px;
+	}
+
+	// .block-top-footer__name
+
+	&__name {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	// .block-top-footer__description
+
+	&__description {
+		line-height: 60px;
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
 }
